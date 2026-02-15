@@ -19,4 +19,16 @@ return {
 			enable = true,
 		},
 	},
+	config = function(_, opts)
+		require("nvim-treesitter").setup(opts)
+
+		local bug_fix_group = vim.api.nvim_create_augroup("TS_Force_Start", { clear = true })
+
+		vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile" }, {
+			group = bug_fix_group,
+			callback = function()
+				pcall(vim.treesitter.start)
+			end,
+		})
+	end,
 }

@@ -9,13 +9,18 @@ return {
 		vim.g.ale_linters = {
 			javascript = { "biome" },
 			typescript = { "biome" },
+			javascriptreact = { "biomei" },
+			typescriptreact = { "biome" },
 			lua = { "lua_ls" },
+			css = { "biome" },
 		}
 
 		-- Enable ALE fixers
 		vim.g.ale_fixers = {
 			javascript = { "biome" },
+			javascriptreact = { "biome" },
 			typescript = { "biome" },
+			typescriptreact = { "biome" },
 			css = { "biome" },
 			json = { "biome" },
 			lua = { "stylua" },
