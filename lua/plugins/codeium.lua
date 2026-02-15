@@ -5,8 +5,7 @@ return {
 		"hrsh7th/nvim-cmp",
 	},
 	config = function()
-		require("codeium").setup({
-			enabled = false,
-		})
+		require("codeium").setup({})
+		vim.cmd(":Codeium Toggle")
 	end,
 }
