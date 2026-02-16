@@ -3,6 +3,7 @@ local ok, err = pcall(function()
 	require("config.lazy")
 	require("config.keymaps")
 	require("config.options")
+    require("config.lsp")
 	require("config.ui")
 end)
 
